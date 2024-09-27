@@ -1,0 +1,179 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block assets_list %}
+    <script src="{% static 'lib/select2-4.0.13/js/select2.min.js' %}"></script>
+    <script src="{% static 'lib/select2-4.0.13/js/i18n/es.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'lib/select2-4.0.13/css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/select2-4.0.13/css/select2-bootstrap4.min.css' %}">
+    <script src="{% static 'lib/bootstrap-daterangepicker-3.1/js/spanish.js' %}"></script>
+    <script src="{% static 'lib/bootstrap-daterangepicker-3.1/js/daterangepicker.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'lib/bootstrap-daterangepicker-3.1/css/daterangepicker.css' %}"/>
+    {% block assets_sale_list %}
+        <script src="{% static 'sale/employee/js/list.js' %}"></script>
+    {% endblock %}
+{% endblock %}
+
+{% block columns %}
+    <th>Id</th>
+    <th>Tipo</th>
+    <th>Cliente</th>
+    <th>Mascota</th>
+    <th>Fecha de registro</th>
+    <th>Hora</th>
+    <th>Subtotal</th>
+    <th>Iva</th>
+    <th>Total</th>
+    <th>Estado</th>
+    <th class="text-center">Opciones</th>
+{% endblock %}
+
+{% block content_list_before %}
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="form-group">
+                <label>{{ form.date_range.label }}:</label>
+                <div class="input-group">
+                    {{ form.date_range }}
+                    <span class="input-group-append">
+                        <button class="btn btn-primary btnSearchAll" type="button">
+                            <i class="fas fa-calendar-check"></i> Ver todas
+                        </button>
+                      </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="form-group">
+                <label>{{ form.type_sale.label }}:</label>
+                {{ form.type_sale }}
+            </div>
+        </div>
+    </div>
+    <hr>
+{% endblock %}
+
+{% block javascript_list %}
+    <div class="modal fade" id="myModalDetails" role="dialog">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold">
+                        <i class="fa fa-search"></i> Detalle de la venta
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#home">
+                                    Cita Médica
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menu1">
+                                    Productos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menu2">
+                                    Vacunas
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#menu3">
+                                    Historial Médico
+                                </a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane container-fluid active" id="home">
+                                <br>
+                                <table style="width:100%;" class="table table-bordered" id="tblQuote">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 30%;">Nombre</th>
+                                        <th style="width: 70%;">Descripción</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane container-fluid fade" id="menu1">
+                                <br>
+                                <table style="width:100%;"
+                                       class="table table-bordered" id="tblProducts">
+                                    <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Categoría</th>
+                                        <th>P./Unitario</th>
+                                        <th>Cantidad</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane container-fluid fade" id="menu2">
+                                <br>
+                                <table style="width:100%;"
+                                       class="table table-bordered" id="tblVaccines">
+                                    <thead>
+                                    <tr>
+                                        <th>Producto</th>
+                                        <th>Categoría</th>
+                                        <th>Fecha de registro</th>
+                                        <th>Siguiente vacuna</th>
+                                        <th>P./Unitario</th>
+                                        <th>Cantidad</th>
+                                        <th>Subtotal</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                            <div class="tab-pane container-fluid fade" id="menu3">
+                                <br>
+                                <table style="width:100%;" class="table table-bordered" id="tblMedicalParameter">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 30%;">Parámetro</th>
+                                        <th style="width: 20%;">Valor</th>
+                                        <th style="width: 50%;">Observación</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block box_footer_buttons %}
+    <div class="row">
+        <div class="col-lg-8">
+            {% if create_url %}
+                <a href="{{ create_url }}" class="btn btn-primary btn-flat">
+                    <i class="fas fa-plus"></i> Nuevo Registro
+                </a>
+            {% endif %}
+            <a href="{{ list_url }}" class="btn btn-success btn-flat">
+                <i class="fas fa-sync-alt"></i> Actualizar
+            </a>
+        </div>
+        <div class="col-lg-4 text-right">
+            <h1 class="font-weight-bold total">$0.00</h1>
+        </div>
+    </div>
+{% endblock %}

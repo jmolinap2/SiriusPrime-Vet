@@ -1,0 +1,65 @@
+var social_networks = {
+    list: function () {
+        $('#data').DataTable({
+            autoWidth: false,
+            destroy: true,
+            deferRender: true,
+            ajax: {
+                url: pathname,
+                type: 'POST',
+                headers: {
+                    'X-CSRFToken': csrftoken
+                },
+                data: {
+                    'action': 'search'
+                },
+                dataSrc: ""
+            },
+            columns: [
+                {"data": "id"},
+                {"data": "css"},
+                {"data": "icon"},
+                {"data": "url"},
+                {"data": "state"},
+                {"data": "id"},
+            ],
+            columnDefs: [
+                {
+                    targets: [-4],
+                    class: 'text-center',
+                    render: function (data, type, row) {
+                        return '<i class="' + data + '"></i>';
+                    }
+                },
+                {
+                    targets: [-2],
+                    class: 'text-center',
+                    render: function (data, type, row) {
+                        if (data) {
+                            return '<span class="badge badge-success badge-pill">Activo</span>';
+                        }
+                        return '<span class="badge badge-danger badge-pill">Inactivo</span>';
+                    }
+                },
+                {
+                    targets: [-1],
+                    class: 'text-center',
+                    orderable: false,
+                    render: function (data, type, row) {
+                        var buttons = '<a href="' + pathname + 'update/' + row.id + '/" data-toggle="tooltip" title="Editar" class="btn btn-warning btn-xs btn-flat"><i class="fas fa-edit"></i></a> ';
+                        buttons += '<a href="' + pathname + 'delete/' + row.id + '/" data-toggle="tooltip" title="Eliminar" class="btn btn-danger btn-xs btn-flat"><i class="fas fa-trash-alt"></i></a>';
+                        return buttons;
+                    }
+                },
+            ],
+            initComplete: function (settings, json) {
+                $('[data-toggle="tooltip"]').tooltip();
+                $(this).wrap('<div class="dataTables_scroll"><div/>');
+            }
+        });
+    }
+};
+
+$(function () {
+    social_networks.list();
+});

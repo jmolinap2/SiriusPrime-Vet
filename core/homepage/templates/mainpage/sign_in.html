@@ -1,0 +1,114 @@
+{% extends 'mainpage/index.html' %}
+{% load static %}
+{% load widget_tweaks %}
+{% block assets %}
+    <script src="{% static 'lib/select2-4.0.13/js/select2.min.js' %}"></script>
+    <script src="{% static 'lib/select2-4.0.13/js/i18n/es.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'lib/select2-4.0.13/css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/select2-4.0.13/css/select2-bootstrap4.min.css' %}">
+    <script src="{% static 'lib/bootstrap-daterangepicker-3.1/js/moment.js' %}"></script>
+    <script src="{% static 'lib/bootstrap-daterangepicker-3.1/js/moment-with-locales.js' %}"></script>
+    <script src="{% static 'lib/tempusdominus-bootstrap-4.5.37.0/js/tempusdominus-bootstrap.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'lib/tempusdominus-bootstrap-4.5.37.0/css/tempusdominus-bootstrap.css' %}"/>
+    <script src="{% static 'mainpage/js/sign_in.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+    <section id="login">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <form method="post" id="frmLogin" data-url="{{ list_url }}" autocomplete="off">
+                    {% csrf_token %}
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Registro de un Cuenta {{ company.name }}</h4>
+                        </div>
+                        <div class="card-body">
+                            <input type="hidden" name="next" value="{{ next }}">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ frmUser.names.label }}:</label>
+                                        {{ frmUser.names }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.dni.label }}:</label>
+                                        {{ form.dni }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ frmUser.email.label }}:</label>
+                                        {{ frmUser.email }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.gender.label }}:</label>
+                                        {{ form.gender }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.mobile.label }}:</label>
+                                        {{ form.mobile }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.phone.label }}:</label>
+                                        {{ form.phone }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.birthdate.label }}:</label>
+                                        {{ form.birthdate }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.parish.label }}:</label>
+                                        {{ form.parish }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ frmUser.image.label }}:</label>
+                                        {{ frmUser.image|add_class:'form-control' }}
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold"> {{ form.address.label }}:</label>
+                                        {{ form.address }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary btn-block btn-flat">
+                                <i class="fas fa-sign-in-alt" aria-hidden="true"></i> Registrarse
+                            </button>
+                            <hr>
+                            <p class="mt-3 text-center desc">
+                                Recibiras un correo con tus credenciales para activar tu nueva cuenta
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    {% include 'mainpage/footer.html' %}
+{% endblock %}

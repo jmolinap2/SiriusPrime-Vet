@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Pastor alemán"
+  },
+  {
+    "id": 2,
+    "name": "Labrador Retriever"
+  },
+  {
+    "id": 3,
+    "name": "Bulldog francés"
+  },
+  {
+    "id": 4,
+    "name": "Golden Retriever"
+  },
+  {
+    "id": 5,
+    "name": "Yorkshire Terrier"
+  },
+  {
+    "id": 6,
+    "name": "Poodle estándar"
+  },
+  {
+    "id": 7,
+    "name": "Chihuahua"
+  },
+  {
+    "id": 8,
+    "name": "Dachshund (Teckel)"
+  },
+  {
+    "id": 9,
+    "name": "Bulldog inglés"
+  },
+  {
+    "id": 10,
+    "name": "Rottweiler"
+  },
+  {
+    "id": 11,
+    "name": "Beagle"
+  },
+  {
+    "id": 12,
+    "name": "Boxer"
+  },
+  {
+    "id": 13,
+    "name": "Pomeranian"
+  },
+  {
+    "id": 14,
+    "name": "Husky siberiano"
+  },
+  {
+    "id": 15,
+    "name": "Doberman"
+  },
+  {
+    "id": 16,
+    "name": "Cocker Spaniel"
+  },
+  {
+    "id": 17,
+    "name": "Shih Tzu"
+  },
+  {
+    "id": 18,
+    "name": "Great Dane"
+  },
+  {
+    "id": 19,
+    "name": "Pug"
+  },
+  {
+    "id": 20,
+    "name": "Border Collie"
+  }
+]

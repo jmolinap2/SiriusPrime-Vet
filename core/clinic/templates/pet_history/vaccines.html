@@ -1,0 +1,40 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block assets_list %}
+    <script src="{% static 'lib/select2-4.0.13/js/select2.min.js' %}"></script>
+    <script src="{% static 'lib/select2-4.0.13/js/i18n/es.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'lib/select2-4.0.13/css/select2.min.css' %}">
+    <link rel="stylesheet" href="{% static 'lib/select2-4.0.13/css/select2-bootstrap4.min.css' %}">
+    <script src="{% static 'pet_history/js/vaccines.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <th>Fecha de registro</th>
+    <th>Cliente</th>
+    <th>Mascota</th>
+    <th>Tipo</th>
+    <th>Raza</th>
+    <th>Medicamento</th>
+    <th>Categoría</th>
+    <th>Próxima vacuna</th>
+{% endblock %}
+
+{% block javascript_list %}
+
+{% endblock %}
+
+{% block content_list_before %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label>{{ form.mascot.label }}:</label>
+                {{ form.mascot }}
+            </div>
+        </div>
+    </div>
+    <hr>
+{% endblock %}
+
+{% block box_footer %}
+
+{% endblock %}

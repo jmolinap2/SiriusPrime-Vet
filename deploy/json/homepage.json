@@ -1,0 +1,560 @@
+[
+  {
+    "model": "homepage.services",
+    "pk": 1,
+    "fields": {
+      "name": "Medicina preventiva",
+      "description": "Contamos con excelentes programas de medicina preventiva como es la aplicación de vacunas para perros y gatos.",
+      "image": "services/2020/09/09/iconfinder_medical-healthcare-hospital-48_4082065.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.services",
+    "pk": 2,
+    "fields": {
+      "name": "Guardería Canina y Felina",
+      "description": "Ofrecemos una asistencia completa y de calidad a tu mascota. Nuestro principal objetivo es mantener la salud y el bienestar de nuestros animales y ayudarlos a restablecerse cuando están enfermos.",
+      "image": "services/2020/09/09/iconfinder_medical-healthcare-hospital-32_4082081.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.services",
+    "pk": 3,
+    "fields": {
+      "name": "Peluquería",
+      "description": "Nuestro servicio de peluquería canina y felina ofrece una amplia variedad de cortes de pelo y baños, tanto estéticos como terapéuticos.",
+      "image": "services/2020/09/09/iconfinder_medical-healthcare-hospital-21_4082092.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.services",
+    "pk": 4,
+    "fields": {
+      "name": "Medicina Interna",
+      "description": "Un buen diagnóstico diferencial y la elección de las pruebas necesarias, simplifica el proceso y limita el gasto, permitiendo la pronta recuperación de nuestros animales.",
+      "image": "services/2020/09/09/iconfinder_medical-healthcare-hospital-02_4082097.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.services",
+    "pk": 5,
+    "fields": {
+      "name": "Obstetricia y Reproducción",
+      "description": "El servicio de obstetricia y reproducción pone a disposición del cliente medidas de prevención y tratamiento, tanto médico como quirúrgico, de estas enfermedades.",
+      "image": "services/2020/09/09/iconfinder_medical-healthcare-hospital-01_4082096.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.services",
+    "pk": 6,
+    "fields": {
+      "name": "Dermatología",
+      "description": "Entendemos que un buen diagnóstico es primordial y para ello realizamos citologías, tricogramas, pruebas de alergia y cualquier otro tipo de pruebas para detectar el problema.",
+      "image": "services/2020/09/09/iconfinder_medical-healthcare-hospital-18_4082095_1.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.departments",
+    "pk": 1,
+    "fields": {
+      "name": "Quirófano",
+      "title": "Quirófano",
+      "description": "Realizamos la cirugía necesaria con la finalidad de asegurarle salud y bienestar a su mascosta.",
+      "image": "departments/2020/09/09/iconfinder_medical-healthcare-hospital-23_4082090.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.departments",
+    "pk": 2,
+    "fields": {
+      "name": "Hospital",
+      "title": "Hospital",
+      "description": "Garantizamos cuidados especiales y personalizados para una atención permanente y tranquila.",
+      "image": "departments/2020/09/09/iconfinder_medical-healthcare-hospital-48_4082065.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.departments",
+    "pk": 3,
+    "fields": {
+      "name": "Laboratorio",
+      "title": "Laboratorio",
+      "description": "Contamos con los equipos tecnológicos necesarios para tomarle muestras que permitan su respectivo análisis.",
+      "image": "departments/2020/09/09/iconfinder_medical-healthcare-hospital-49_4082064.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.departments",
+    "pk": 4,
+    "fields": {
+      "name": "Peluquería",
+      "title": "Peluquería",
+      "description": "Tenemos el mejor servicio de peluquería destinada a para procurarle cuidados y estética a su mascosta.",
+      "image": "departments/2020/09/09/iconfinder_medical-healthcare-hospital-07_4082102.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.frequentquestions",
+    "pk": 1,
+    "fields": {
+      "question": "¿Cada cuánto tiempo es recomendable bañar a mi perro?",
+      "answer": "Es importante no bañar a tu mascota más de una vez al mes en situaciones normales. Bien es verdad, que hay situaciones especiales en la que la frecuencia pueda o deba ser mayor. Para ello, los productos de higiene deben ser adecuados puesto que hay algunos que producen determinadas alergias al animal, por lo que debemos vigilarlo si el baño se lo damos en casa.",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.frequentquestions",
+    "pk": 2,
+    "fields": {
+      "question": "¿Es normal que mi mascota se rasque tanto?",
+      "answer": "Nuestra mascotas mudan su pelo dos veces al año, en primavera y otoño normalmente. Es recomendable el cepillado con la mayor frecuencia posible en la época de cambio, con los utensilios adecuados dependiendo de si tiene capas largas o cortas. La salud y el aspecto del pelo esta íntimamente relacionado con la calidad de la alimentación que le proporcionamos a nuestras mascota.",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.frequentquestions",
+    "pk": 3,
+    "fields": {
+      "question": "¿Es necesario vacunar a mi perro o gato?",
+      "answer": "No solo es necesario y recomendable vacunar a nuestras mascotas, también es obligatorio por ley vacunar de la rabia. Pero sobre todo es fundamental con el objetivo de asegurar la prevención de enfermedades graves y a veces mortales que puedan padecer a lo largo de sus vidas.\n\nLos programas de vacunación son variados pero hay que instaurarlos de forma individualizada de acuerdo a la edad, estados sanitarios, situaciones ambientales, factores de riesgo, enfermedades endémicas etc De esta manera conseguiremos una inmunidad adecuada en cada etapa de vida del animal. El comienzo de la vacunación está entre las seis semanas y los seis meses. Posteriormente es recomendable revacunar periódicamente de forma annual, bianual etc.",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.frequentquestions",
+    "pk": 4,
+    "fields": {
+      "question": "¿Por qué es recomendable la esterilización?",
+      "answer": "Muchísimos propietarios que se acercan a la clínica nos preguntan por la esterilización y su procedimiento muy frecuentemente. Son muchas las ventajas  y algunos los inconvenientes.",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.frequentquestions",
+    "pk": 5,
+    "fields": {
+      "question": "¿Cómo debo alimentar a mi perro o gato?",
+      "answer": "Podemos encontrar multitud de alimentos de diferentes calidades y precios en formatos muy variados y con fórmulas tanto en pienso como en húmedos, que se adaptan a las etapas de crecimiento, mantenimiento de adultos, animales senior y dietas especiales para distintas condiciones o enfermedades. Debemos asesorarnos con profesionales que recomienden e informen debidamente.\n\nLa alimentación de tipo casero esta cada vez más en retroceso porque implica trabajo y esfuerzo y tiende a provocar déficits nutricionales. Además, alimentar con restos y despojos esta totalmente desaconsejado por los riesgos que supone para salud digestiva y general de nuestra mascota.",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.frequentquestions",
+    "pk": 6,
+    "fields": {
+      "question": "¿Qué producto antiparasitario externo es el mejor?",
+      "answer": "No existe un método único para evitar pulgas, garrapatas, mosquitos y otro parásitos. Nuestra recomendación es utilizar el producto que mejor se adapte a la situación o necesidad particular de su mascota. Dependiendo del lugar donde viva (en el exterior o el interior), si convive con otros animales y los hábitos del animal influyen considerablemente en la elección.\n\nEn el mercado hay una extensa gama de estos productos, muy eficaces y seguros. Siempre se recomienda el uso de uno o la combinación de varios para que la protección sea más efectiva.",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.frequentquestions",
+    "pk": 7,
+    "fields": {
+      "question": "¿Cuando es recomendable la visita al veterinario?",
+      "answer": "Está muy claro que cuando observamos que nuestra mascota esta enferma o le ocurre algo nos planteamos la visita al veterinario, pero a veces consideramos que lo que le ocurre se le pasará y pueden pasar varios días y el problema se puede complicar,  por tanto es importante considerar que la información que los profesionales nos brindan en las situaciones de salud a veces no se deben hacer esperar.",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.testimonials",
+    "pk": 1,
+    "fields": {
+      "names": "Álvaro Oscar Perez Dávila",
+      "job": "Docente Universitario",
+      "description": "Son parte de mi familia que siempre han cuidado de mis seres más queridos con el mismo interés y cariño que le pondrían a cualquiera de sus propios perros. Sin duda alguna profesionales en los que confiar con los ojos cerrados.",
+      "image": "testimonials/2020/09/09/iconfinder_3_avatar_2754579.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.testimonials",
+    "pk": 2,
+    "fields": {
+      "names": "Kevin Paul Locke Araguillin",
+      "job": "Bombero",
+      "description": "Quizá lo que más me gusta de ellos es la cercanía que tienen, el salir siempre con la sensación de que mis perros están en buenas manos. Me gusta como trabajan en equipo y como se unen para diagnosticar y pautar el tratamiento. He tenido buenísima experiencia con ello en alguna intervención y me ha gustado que son veterinarios muy relacionados con otros profesionales del gremio, lo cual hace que su servicio al cliente sea de una profesionalidad máxima.",
+      "image": "testimonials/2020/09/09/iconfinder_12_avatar_2754577.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.testimonials",
+    "pk": 3,
+    "fields": {
+      "names": "Alexis Rafael Perez Tomala",
+      "job": "Contador",
+      "description": "Estamos muy agradecidos a los médicos y el personal de la veterinaria para el amor y cuidado a nuestro perro recientemente recibió. Ellos siempre son profesionales y que sienten que van \"más allá\" de su cuidado, compasión, profesionalismo, y amistad. Nuestro perro recibe la mejor en cada visita. Gracias!",
+      "image": "testimonials/2020/09/09/iconfinder_7_avatar_2754582.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.gallery",
+    "pk": 2,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "name": "Imagen 1",
+      "description": "Imagen 1",
+      "image": "gallery/2020/09/09/gallery-1.jpg",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.gallery",
+    "pk": 3,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "name": "Imagen 2",
+      "description": "Imagen 2",
+      "image": "gallery/2020/09/09/gallery-2.jpg",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.gallery",
+    "pk": 4,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "name": "Imagen 3",
+      "description": "Imagen 3",
+      "image": "gallery/2020/09/09/gallery-3.jpg",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.gallery",
+    "pk": 5,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "name": "Imagen 4",
+      "description": "Imagen 4",
+      "image": "gallery/2020/09/09/gallery-4.jpg",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.gallery",
+    "pk": 6,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "name": "Imagen 5",
+      "description": "Imagen 5",
+      "image": "gallery/2020/09/09/gallery-5.jpg",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.gallery",
+    "pk": 7,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "name": "Imagen 6",
+      "description": "Imagen 6",
+      "image": "gallery/2020/09/09/gallery-6.jpg",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.gallery",
+    "pk": 8,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "name": "Imagen 7",
+      "description": "Imagen 7",
+      "image": "gallery/2020/09/09/gallery-7.jpg",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.gallery",
+    "pk": 9,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "name": "Imagen 8",
+      "description": "Imagen 8",
+      "image": "gallery/2020/09/09/gallery-8.jpg",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.socialnetworks",
+    "pk": 1,
+    "fields": {
+      "css": "twitter",
+      "icon": "fab fa-twitter",
+      "url": "https://twitter.com/",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.socialnetworks",
+    "pk": 2,
+    "fields": {
+      "css": "facebook",
+      "icon": "fab fa-facebook-f",
+      "url": "https://facebook.com/",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.socialnetworks",
+    "pk": 3,
+    "fields": {
+      "css": "instagram",
+      "icon": "fab fa-instagram",
+      "url": "https://instagram.com/",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.socialnetworks",
+    "pk": 4,
+    "fields": {
+      "css": "skype",
+      "icon": "fab fa-skype",
+      "url": "https://skype.com/",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.socialnetworks",
+    "pk": 5,
+    "fields": {
+      "css": "linkedin",
+      "icon": "fab fa-linkedin-in",
+      "url": "https://linkedin.com/",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.statistics",
+    "pk": 1,
+    "fields": {
+      "name": "Doctores",
+      "image": "services/2020/09/09/iconfinder_30-Doctor_5929214.png",
+      "cant": 5,
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.statistics",
+    "pk": 2,
+    "fields": {
+      "name": "Departamentos",
+      "image": "services/2020/09/09/iconfinder_hospital-building-nursing-healthcare-medical_5728195.png",
+      "cant": 4,
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.statistics",
+    "pk": 3,
+    "fields": {
+      "name": "Hora de trabajo",
+      "image": "services/2020/09/09/iconfinder_Finance_financial_planning_1889194.png",
+      "cant": 4000,
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.statistics",
+    "pk": 4,
+    "fields": {
+      "name": "Reconocimientos",
+      "image": "services/2020/09/09/iconfinder_488_certificate_achievement_degrees_award_4212933.png",
+      "cant": 2,
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.team",
+    "pk": 1,
+    "fields": {
+      "names": "Ignacio Luis Chavez Lazo",
+      "phrase": "El mejor medico del mundo es el veterinario . El no puede preguntarles a sus pacientes que les pasa, simplemente lo tiene que saber.",
+      "job": "Medico Veterinario y Zootecnia",
+      "image": "team/2022/05/05/doctors-3.jpg",
+      "description": "El médico veterinario, como profesional de la salud, adquiere cada vez más importancia a nivel mundial como un protector de la salud humana ante la avalancha de las más de 20 enfermedades trasmitidas de los animales al hombre.",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.teamsocialnetworks",
+    "pk": 17,
+    "fields": {
+      "team": 1,
+      "name": "linkedin",
+      "icon": "fab fa-linkedin-in",
+      "url": "https://linkedin.com/"
+    }
+  },
+  {
+    "model": "homepage.teamsocialnetworks",
+    "pk": 18,
+    "fields": {
+      "team": 1,
+      "name": "skype",
+      "icon": "fab fa-skype",
+      "url": "https://skype.com/"
+    }
+  },
+  {
+    "model": "homepage.teamsocialnetworks",
+    "pk": 19,
+    "fields": {
+      "team": 1,
+      "name": "instagram",
+      "icon": "fab fa-instagram",
+      "url": "https://instagram.com/"
+    }
+  },
+  {
+    "model": "homepage.teamsocialnetworks",
+    "pk": 20,
+    "fields": {
+      "team": 1,
+      "name": "facebook",
+      "icon": "fab fa-facebook-f",
+      "url": "https://facebook.com/"
+    }
+  },
+  {
+    "model": "homepage.teamsocialnetworks",
+    "pk": 21,
+    "fields": {
+      "team": 1,
+      "name": "twitter",
+      "icon": "fab fa-twitter",
+      "url": "https://twitter.com/"
+    }
+  },
+  {
+    "model": "homepage.qualities",
+    "pk": 1,
+    "fields": {
+      "name": "Cuidado integral de la mascota",
+      "description": "La atención de confianza que tus animales merecen.",
+      "image": "qualities/2020/09/09/iconfinder__document_paper_checklist_list_virus_disease_5928523.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.qualities",
+    "pk": 2,
+    "fields": {
+      "name": "Equipo especializado y multidisciplinar",
+      "description": "La profesionalidad, formación actualizada y mejor infraestructura a tu servicio.",
+      "image": "qualities/2020/09/09/_check_scan_mna_virus_disease_safety-512.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.qualities",
+    "pk": 3,
+    "fields": {
+      "name": "La mejor atención al alcance de tu mano",
+      "description": "Asistencia de calidad, sin renunciar al cariño y la cercanía.",
+      "image": "qualities/2020/09/09/_protection_safety_hand_clean_hygiene-512.png",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.news",
+    "pk": 1,
+    "fields": {
+      "date_joined": "2020-10-04",
+      "title": "CONOZCA QUÉ HAY DETRÁS DE LAS BOLAS DE PELO QUE SUELEN EXPULSAR EN OCASIONES LOS FELINOS",
+      "description": "Un sistema natural de limpieza en los gatos es que deben lamer su pelo por varios minutos. Sin embargo esto puede llegar a ocasionar problemas de salud, pues es difícil controlar la ingesta espontánea de pelo por parte de su mascota.",
+      "image": "news/2020/10/04/gato.jpg",
+      "url": "https://www.agronegocios.co/mascotas/conozca-que-hay-detras-de-las-bolas-de-pelo-que-suelen-expulsar-en-ocasiones-los-felinos-3043287",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.news",
+    "pk": 2,
+    "fields": {
+      "date_joined": "2020-10-04",
+      "title": "ASESORÍA VETERINARIA POR VIDEOLLAMADA, UNA ALTERNATIVA PARA EVITAR SALIR DE LAS CASAS",
+      "description": "Las actividades relacionadas con servicios de emergencia, incluidas las emergencias veterinarias, están incluidas entre las excepciones al aislamiento preventivo decretado por el Gobierno Nacional debido al Covid-19. Sin embargo, para evitar salidas innecesarias, como la visita al veterinario, algunas clínicas han habilitado consultas 24/7 a través de videollamadas, para garantizar el bienestar de las mascotas protegiendo la salud de todos.",
+      "image": "news/2020/10/04/102438524_xl1.jpg",
+      "url": "https://www.agronegocios.co/mascotas/asesoria-veterinaria-por-videollamada-una-alternativa-para-evitar-salir-de-las-casas-2982408#",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.news",
+    "pk": 3,
+    "fields": {
+      "date_joined": "2020-10-04",
+      "title": "LAS RECOMENDACIONES PARA CUIDAR LA SALUD DE LAS MASCOTAS EN ESTAS VACACIONES",
+      "description": "No es raro que en las jornadas de vacaciones los mascotas viajen con sus dueños, ahora bien, estos viajes y principalmente cuando hay cambios de clima, pueden afectar la salud de los animales por lo que es importante tener ciertas precauciones al salir de casa. En los climas fríos las mascotas no sufren tanto como en los cálidos, es por eso se pueden presentar casos de quemaduras, deshidratación e incluso descompensación del animal.",
+      "image": "news/2020/10/04/36405424_xl-2.jpg",
+      "url": "https://www.agronegocios.co/mascotas/las-recomendaciones-para-cuidar-la-salud-de-las-mascotas-en-estas-vacaciones-2938549",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.news",
+    "pk": 4,
+    "fields": {
+      "date_joined": "2020-10-04",
+      "title": "LAS VISITAS AL VETERINARIO QUE DEBE HACER UN PERRO O GATO AL AÑO PARA CONTROLES VETERINARIOS",
+      "description": "Las mascotas deben ir al veterinario mínimo dos veces al año para tener controles periódicos y así identificar enfermedades que puedan ser más graves y afectar la vida del animal, dado que es posible detectar patologías en estados tempranos a las cuales se le podría dar tratamientos de manea oportuna con buenas proyecciones de mejora para la mascota.",
+      "image": "news/2020/10/04/233577418-1.jpg",
+      "url": "https://www.agronegocios.co/mascotas/las-visitas-al-veterinario-que-debe-hacer-un-perro-o-gato-al-ano-para-controles-2923931",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.videos",
+    "pk": 1,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "title": "¿Cómo CUIDAR CACHORROS? ¡Guía Completa!",
+      "url": "https://www.youtube.com/embed/9dDemBxxulo",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.videos",
+    "pk": 2,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "title": "Educando un CACHORRO DESDE CERO",
+      "url": "https://www.youtube.com/embed/xluNhJ09YFA",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.videos",
+    "pk": 3,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "title": "PARVOVIRUS EN PERROS - Síntomas y tratamiento",
+      "url": "https://www.youtube.com/embed/F91jW_Pxg80",
+      "state": true
+    }
+  },
+  {
+    "model": "homepage.videos",
+    "pk": 4,
+    "fields": {
+      "date_joined": "2020-09-09",
+      "title": "Cómo suministrar LAS VITAMINAS a mi perro . Familia Canina",
+      "url": "https://www.youtube.com/embed/FPTzJ-ohxzc",
+      "state": true
+    }
+  }
+]

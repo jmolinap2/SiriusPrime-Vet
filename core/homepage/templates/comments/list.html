@@ -1,0 +1,22 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block assets_list %}
+    <script src="{% static 'comments/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <th>Id</th>
+    <th>Nombres</th>
+    <th>Teléfono</th>
+    <th>Email</th>
+    <th>Mensaje</th>
+    <th class="text-center">Opciones</th>
+{% endblock %}
+
+{% block box_footer %}
+
+{% endblock %}
+
+{% block javascript_list %}
+
+{% endblock %}

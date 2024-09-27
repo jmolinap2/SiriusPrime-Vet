@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'lib/bootstrap-4.6.0/css/bootstrap.min.css' %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        @page {
+            size: A4;
+            margin: 0 auto;
+            padding: 30px 25px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: black !important;
+            min-height: 100%;
+        }
+
+        .content {
+            width: 75%;
+        }
+
+        .head-name {
+            margin-top: 10px;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 0;
+            text-align: center;
+        }
+
+        .head-details {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .table {
+            color: black;
+        }
+
+        .details td, .details th {
+            color: black;
+            text-transform: uppercase;
+            font-size: 12px;
+            padding: 2px 5px;
+            border: 1px solid black !important;
+        }
+
+        .img-logo {
+            margin-top: 5px;
+            width: 20px;
+            height: 20px;
+            margin-bottom: 5px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="content">
+    <img alt="" src="{{ company.get_image }}" class="img-fluid d-block mx-auto img-logo">
+    <h1 class="head-name">{{ company.name|upper }}</h1>
+    <p class="text-center head-details">
+        {{ company.address }}<br>
+        R.U.C.: N° {{ company.ruc }}<br>
+        TEL: {{ company.phone }} / CEL: {{ company.mobile }}
+    </p>
+
+    <table style="width: 100%">
+        <tr>
+            <td><b>Factura</b></td>
+            <td>{{ sale.get_number }}</td>
+            <td><b>Veterinario</b></td>
+            <td>{{ sale.employee.user.names }}</td>
+        </tr>
+        <tr>
+            <td><b>Fecha de registro</b></td>
+            <td>{{ sale.date_joined|date:'c' }}</td>
+            <td><b>Tipo</b></td>
+            <td>{{ sale.get_type_display }}</td>
+        </tr>
+        <tr>
+            <td><b>Cliente</b></td>
+            <td>{{ sale.mascot.client.user.names }}</td>
+            <td><b>Mascota</b></td>
+            <td>{{ sale.mascot.name }}</td>
+        </tr>
+        <tr>
+            <td><b>Tipo</b></td>
+            <td>{{ sale.mascot.breed_pet.type_pet.name }}</td>
+            <td><b>Raza</b></td>
+            <td>{{ sale.mascot.breed_pet.name }}</td>
+        </tr>
+        <tr>
+            <td><b>Color</b></td>
+            <td>{{ sale.mascot.color.name }}</td>
+            <td><b>Fecha de nacimiento</b></td>
+            <td>{{ sale.mascot.birthdate|date:'c' }}</td>
+        </tr>
+        <tr>
+            <td><b>Subtotal</b></td>
+            <td>{{ sale.subtotal|floatformat:2 }}</td>
+            <td><b>IVA {{ sale.iva|floatformat:2 }}%</b></td>
+            <td>{{ sale.total_iva|floatformat:2 }}</td>
+        </tr>
+        <tr>
+            <td><b>Total a pagar</b></td>
+            <td>{{ sale.total|floatformat:2 }}</td>
+            <td><b>Estado</b></td>
+            <td>{{ sale.get_status_display }}</td>
+        </tr>
+    </table>
+
+    <br>
+
+    {% if sale.historialmedical_set.all %}
+        <table class="table table-bordered details" style="width: 100%;">
+            <thead>
+            <tr>
+                <th colspan="4" class="text-center text-uppercase font-weight-bold">
+                    Historial Médico
+                </th>
+            </tr>
+            <tr>
+                <th style="width: 10%;">Id</th>
+                <th style="width: 20%;">Nombre</th>
+                <th style="width: 20%;">Valor</th>
+                <th style="width: 50%;">Descripción</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for det in sale.historialmedical_set.all %}
+                <tr>
+                    <td class="text-center">{{ forloop.counter }}</td>
+                    <td class="text-center">{{ det.medical_parameter.name }}</td>
+                    <td class="text-center">{{ det.valor }}</td>
+                    <td>{{ det.description }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+    {% if sale.get_products %}
+        <table class="table table-bordered details" style="width: 100%;">
+            <thead>
+            <tr>
+                <th colspan="5" class="text-center text-uppercase font-weight-bold">
+                    Detalle de Productos
+                </th>
+            </tr>
+            <tr>
+                <th style="width: 10%;">Cantidad</th>
+                <th style="width: 40%;">Producto</th>
+                <th style="width: 20%;">Categoría</th>
+                <th style="width: 15%;">P./Unitario</th>
+                <th style="width: 15%;" class="text-right">Subtotal</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for d in sale.get_products %}
+                <tr>
+                    <td class="text-center">{{ d.cant }}</td>
+                    <td>{{ d.product.name }}</td>
+                    <td>{{ d.product.category.name }}</td>
+                    <td class="text-center">{{ d.price|floatformat:2 }}</td>
+                    <td class="text-right">{{ d.subtotal|floatformat:2 }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="4" class="text-right"><b>Subtotal</b></td>
+                <td class="text-right">{{ sale.get_subtotal_products|floatformat:2 }}</td>
+            </tr>
+            </tbody>
+        </table>
+    {% endif %}
+    {% if sale.get_vaccines %}
+        <table class="table table-bordered details" style="width: 100%;">
+            <thead>
+            <tr>
+                <th colspan="6" class="text-center text-uppercase font-weight-bold">
+                    Detalle de Vacunas
+                </th>
+            </tr>
+            <tr>
+                <th style="width: 5%;">Cantidad</th>
+                <th style="width: 25%;">Producto</th>
+                <th style="width: 15%;">Fecha de registro</th>
+                <th style="width: 20%;">Próxima vacuna</th>
+                <th style="width: 20%;">P./Unitario</th>
+                <th style="width: 15%;" class="text-right">Subtotal</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for d in sale.get_vaccines %}
+                <tr>
+                    <td class="text-center">{{ d.cant }}</td>
+                    <td>{{ d.product.name }}</td>
+                    <td>{{ d.date_vaccine|date:'c' }}</td>
+                    <td>{{ d.next_date|date:'c' }}</td>
+                    <td class="text-center">{{ d.price|floatformat:2 }}</td>
+                    <td class="text-right">{{ d.subtotal|floatformat:2 }}</td>
+                </tr>
+            {% endfor %}
+            <tr>
+                <td colspan="5" class="text-right"><b>Subtotal</b></td>
+                <td class="text-right">{{ sale.get_vaccines_products|floatformat:2 }}</td>
+            </tr>
+            </tbody>
+        </table>
+    {% endif %}
+    {% if sale.type == 'quote' %}
+        <table class="table table-bordered details" style="width: 100%">
+            <thead>
+            <tr>
+                <th colspan="2" class="text-center text-uppercase font-weight-bold">
+                    Detalle de la cita médica
+                </th>
+            </tr>
+            </thead>
+            <tr>
+                <td style="width: 20%;"><b>Sintomas</b></td>
+                <td style="width: 80%;">{{ sale.symptoms }}</td>
+            </tr>
+            <tr>
+                <td><b>Observación</b></td>
+                <td>{{ sale.observation }}</td>
+            </tr>
+            <tr>
+                <td><b>Diagnóstico</b></td>
+                <td>{{ sale.diagnosis }}</td>
+            </tr>
+        </table>
+    {% endif %}
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'list.html' %}
+{% load static %}
+{% block assets_list %}
+    <script src="{% static 'news/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <th>Id</th>
+    <th>Fecha de registro</th>
+    <th>Titulo</th>
+    <th>Descripción</th>
+    <th>Estado</th>
+    <th class="text-center">Opciones</th>
+{% endblock %}
+
+{% block javascript_list %}
+
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'sale/employee/list.html' %}
+{% load static %}
+{% block assets_sale_list %}
+    <script src="{% static 'sale/admin/js/list.js' %}"></script>
+{% endblock %}
+
+{% block columns %}
+    <th>Id</th>
+    <th>Tipo</th>
+    <th>Veterinario</th>
+    <th>Mascota</th>
+    <th>Fecha de registro</th>
+    <th>Hora</th>
+    <th>Subtotal</th>
+    <th>Iva</th>
+    <th>Total</th>
+    <th>Estado</th>
+    <th class="text-center">Opciones</th>
+{% endblock %}
