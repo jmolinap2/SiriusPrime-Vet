@@ -1,7 +1,7 @@
 # Guarda esto como un archivo dentro de cualquier aplicación Django en la carpeta management/commands
 
 
-ffrom django.core.management.base import BaseCommand
+from django.core.management.base import BaseCommand
 import os
 
 class Command(BaseCommand):
