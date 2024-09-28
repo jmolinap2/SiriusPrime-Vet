@@ -24,9 +24,9 @@ class Command(BaseCommand):
         numbers_letters = list(string.digits) + list(string.ascii_uppercase)
 
         company = Company.objects.create(
-            name='PEGASUS',
+            name='Sirius Prime',
             ruc='0928363993001',
-            proprietor='William Jair Dávila Vargas',
+            proprietor='Jesús Alejandro Molina P.',
             description='Somos una clínica veterinaria enfocada en la atención integral de las mascotas, convencidos en que toda mascota merece una atención de alta calidad y calidez, con médicos especializados, equipos de diagnóstico y protocolos actualizados, cuidamos de la salud y bienestar de las mascotas',
             with_us='Somos una clínica veterinaria que se dedica a la prestación de un servicio integral en los ámbitos de los cuidados clínicos veterinarios y asesoramiento.',
             mission='Ofrecer bienestar tanto animal, como a las familias de nuestros pacientes a través de la prestación de servicios médicos veterinarios y complementarios, entregando calidad y satisfacción, superando las expectativas de nuestros clientes, contribuyendo a la innovación y desarrollo profesional del sector Médico Veterinario de la Región.',

@@ -19,8 +19,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         dashboard = Dashboard.objects.create(
-            name='PEGASUS',
-            author='William Jair Dávila Vargas',
+            name='Sirius Prime',
+            author='Jesús Alejandro Molina P.',
             icon='fas fa-paw',
             layout=1,
             navbar='navbar-dark navbar-navy',
@@ -528,9 +528,9 @@ class Command(BaseCommand):
                 group.permissions.add(permission)
 
         user = User.objects.create(
-            names='William Jair Dávila Vargas',
+            names='Jesús Alejandro Molina P.',
             username='admin',
-            email='davilawilliam93@gmail.com',
+            email='jmolinap95@gmail.com',
             is_active=True,
             is_superuser=True,
             is_staff=True
