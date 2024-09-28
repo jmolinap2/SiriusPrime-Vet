@@ -116,7 +116,7 @@ https://www.youtube.com/c/AlgoriSoft?sub_confirmation=1
 https://www.facebook.com/algorisoft
 
 **Donando por PayPal**
-williamjair94@hotmail.com
+jmolinap95@gmail.com
 
 ***AlgoriSoft te desea lo mejor en tu aprendizaje y crecimiento profesional como programador 🤓.***
 

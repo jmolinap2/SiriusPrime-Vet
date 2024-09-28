@@ -33,6 +33,32 @@ class Command(BaseCommand):
         moduletype = ModuleType.objects.create(name='Seguridad', icon='fas fa-lock')
         print(f'insertado {moduletype.name}')
 
+        # Creación de la compañía, movido desde insert_test_data.py
+        company = Company.objects.create(
+            name='Sirius Prime',
+            ruc='0928363993001',
+            proprietor='Jesús Alejandro Molina P.',
+            description='Somos una clínica veterinaria enfocada en la atención integral de las mascotas, convencidos en que toda mascota merece una atención de alta calidad y calidez, con médicos especializados, equipos de diagnóstico y protocolos actualizados, cuidamos de la salud y bienestar de las mascotas',
+            with_us='Somos una clínica veterinaria que se dedica a la prestación de un servicio integral en los ámbitos de los cuidados clínicos veterinarios y asesoramiento.',
+            mission='Ofrecer bienestar tanto animal, como a las familias de nuestros pacientes a través de la prestación de servicios médicos veterinarios y complementarios, entregando calidad y satisfacción, superando las expectativas de nuestros clientes, contribuyendo a la innovación y desarrollo profesional del sector Médico Veterinario de la Región.',
+            vision='Buscar la excelencia en la prevención, detección y curación de enfermedades en animales de compañía, aumentando el nivel de seguridad sanitaria en quienes conviven con ellos y hacerlo de forma sostenible, rentable, profesional y ética; así como mejorar la relación afectiva entre las mascotas y sus propietarios, generando un mayor equilibrio sanitario y emocional en ambos.',
+            about_us='Contribuir y satisfacer las necesidades de nuestros clientes ofreciendo un servicio rápido, garantizando altos estándares de calidad diagnóstica.',
+            phone='2977557',
+            mobile='0960712144',
+            email='jmolinap95@gmail.com',
+            address='Durán Cdla Panorana calle 2da junto al tia, Durán, Ecuador',
+            horary='Lunes a Sábado de 08:00 a 21:00',
+            latitude='-2.1436557',
+            longitude='-79.5985745',
+            about_youtube='https://youtu.be/znjbyrslLDw',
+            iva=12.00
+        )
+        image_path = f'{settings.BASE_DIR}{settings.STATIC_URL}img/default/logo.png'
+        company.image.save(basename(image_path), content=File(open(image_path, 'rb')), save=False)
+        company.save()
+
+        print(f'Compañía creada: {company.name}')
+
         modules_data = [
             {
                 'name': 'Tipos de Módulos',
