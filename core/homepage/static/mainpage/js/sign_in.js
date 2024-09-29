@@ -284,8 +284,8 @@ $(function () {
     // $(fv.form).find('input[name="dni"]').val('0913960944');
     // $(fv.form).find('input[name="mobile"]').val('0979014552');
     // $(fv.form).find('input[name="phone"]').val('2977552');
-    // $(fv.form).find('input[name="password"]').val('hacker94');
+    // $(fv.form).find('input[name="password"]').val('hacker95');
     // $(fv.form).find('input[name="address"]').val('Milagro');
     // $(fv.form).find('select[name="parish"]').val('549').trigger('change.select2');
-    // $(fv.form).find('input[name="email"]').val('williamjairdavilavargas@gmail.com');
+
 });

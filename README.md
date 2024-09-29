@@ -94,29 +94,9 @@ python manage.py runserver 0:8000 o python manage.py runserver 0.0.0.0:8000
 
 ```bash
 username: admin
-password: hacker94
+password: hacker95
 ```
 
 # Gracias por adquirir mi producto ✅🙏
 
-#### Esto me sirve mucho para seguir produciendo mi contenido 🤗​
-
-### ¡Apóyame! para seguir haciéndolo siempre 😊👏
-
-Paso la mayor parte de mi tiempo creando contenido y ayudando a futuros programadores sobre el desarrollo web con tecnología open source.
-
-🤗💪¡Muchas Gracias!💪🤗
-
-**Puedes apoyarme de la siguiente manera.**
-
-**Suscribiéndote**
-https://www.youtube.com/c/AlgoriSoft?sub_confirmation=1
-
-**Siguiendo**
-https://www.facebook.com/algorisoft
-
-**Donando por PayPal**
-jmolinap95@gmail.com
-
-***AlgoriSoft te desea lo mejor en tu aprendizaje y crecimiento profesional como programador 🤓.***
 

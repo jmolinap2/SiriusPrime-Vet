@@ -561,7 +561,7 @@ class Command(BaseCommand):
             is_superuser=True,
             is_staff=True
         )
-        user.set_password('hacker94')
+        user.set_password('hacker95')
         user.save()
         user.groups.add(group)
         print(f'Bienvenido {user.names}')
