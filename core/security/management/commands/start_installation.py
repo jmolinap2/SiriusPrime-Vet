@@ -48,8 +48,8 @@ class Command(BaseCommand):
             email='jmolinap95@gmail.com',
             address='Durán Cdla Panorana calle 2da junto al tia, Durán, Ecuador',
             horary='Lunes a Sábado de 08:00 a 21:00',
-            latitude='-2.1436557',
-            longitude='-79.5985745',
+            latitude='-2.172485',
+            longitude='-79.799632',
             about_youtube='https://youtu.be/znjbyrslLDw',
             iva=12.00
         )
