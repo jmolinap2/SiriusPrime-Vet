@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0.2/ref/settings/
 """
 
+from .info import print_info
+
 import os.path
 import environ
 
@@ -209,3 +211,10 @@ GROUPS = {
     'client': 2,
     'employee': 3
 }
+
+
+
+# Llamar a `print_info` después de todas las configuraciones
+if os.environ.get('RUN_MAIN') != 'true':
+    os.environ['G_MESSAGES_DEBUG'] = 'none'
+    print_info(DATABASES, ALLOWED_HOSTS)
